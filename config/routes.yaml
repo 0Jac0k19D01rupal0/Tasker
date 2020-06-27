@@ -1,3 +1,15 @@
 index:
     path: /main
-    controller: App\Controller\MainController::test
+    controller: App\Controller\MainController::index
+    requirements:
+
+new_task:
+    path: /new_task
+    controller: App\Controller\TaskController::newTask
+    requirements:
+
+app_task:
+    path: /task/{task}/
+    controller: App\Controller\TaskController::index
+    requirements:
+        id: '\d+'
